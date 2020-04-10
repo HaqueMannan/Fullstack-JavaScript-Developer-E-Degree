@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Forms</title>
+   </head>
+   <body>
+      <p>Return to <a href="/1.helloworld.html" title="Hello World">Home</a></p>
+
+      <form method="get">
+         <label for="email">Email:</label>
+         <input type="text" id="email" name="email" placeholder="Email" size="30px" maxlength="100">
+         <label for="password">Password:</label>
+         <input type="password" id="password" name="password" placeholder="Password" size="30px" maxlength="30">
+         <input type="submit" value="Login">
+      </form>
+
+      <br>
+      <br>
+
+      <form>
+         <label for="address">Address:</label>
+         <input type="text" id="address" name="address" placeholder="Address" size="30px" maxlength="100">
+         <br>
+         <label for="postcode">Postcode:</label>
+         <input type="text" id="postcode" name="postcode" placeholder="Postcode" size="30px" maxlength="8">
+         <br>
+         <label for="city">City:</label>
+         <input type="text" id="city" name="city" placeholder="City" size="30px" maxlength="100">
+         <p>Choose your shipping method:</p>
+         <select name="shipping">
+            <option value="Free super saver shipping">Free super saver shipping</option>
+            <option value="Standard 3 day shipping">Standard 3 day shipping</option>
+            <option value="Next working day shipping">Next working day shipping</option>
+         </select>
+         <p>Choose your payment method:</p>
+         <label>Paypal <input type="radio" name="payment" value="paypal"></label>
+         <label>Direct Card <input type="radio" name="payment" value="debit card"></label>
+         <label>Credit Card <input type="radio" name="payment" value="credit card"></label>
+         <br>
+         <label for="comments">Comments:</label>
+         <textarea name="comments" id="comments" cols="40" rows="4"></textarea>
+         <br>
+         <label>Sign me up for email updates <input type="checkbox" name="email update" checked="checked"></label>
+         <br>
+         <label>Securely save my input details <input type="checkbox" name="save payment"></label>
+         <br>
+         <input type="submit" value="Submit Form">
+      </form>
+   </body>
+</html>
