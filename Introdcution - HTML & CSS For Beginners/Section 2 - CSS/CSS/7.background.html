@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Box Model - Padding, Border, Outline and Margin</title>
+      <style>
+         .yellowbox {
+            background-image: url(img/image.jpeg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-origin: content-box;
+            height: 200px;
+            width: auto;
+            padding: 16px;
+            border: 10px orange ridge;
+            outline-style: solid;
+            outline-color: purple;
+            outline-width: thick;
+            margin: 20px;
+         }
+         .redbox {
+            background-image: url(img/image.jpeg);
+            background-size: 100px 100px;
+            background-repeat: no-repeat;
+            background-origin: border-box;
+            background-position: bottom;
+            color: white;
+            height: 200px;
+            width: auto;
+            padding: 10px 5px 7px 3em;
+            border-width: 10px 15px 5px 10px;
+            border-color: black green orange yellow;
+            border-style: ridge;
+            margin: 60px 10px 30px 20px;
+         }
+         .greenbox {
+            background-color: #008080;
+            color: white;
+            height: 200px;
+            width: 200px;
+            padding: 10px;
+            border-width: 20px;
+            border-color: paleturquoise;
+            border-style: groove;
+            border-radius: 180px;
+            margin: 60px 10px;
+         }
+         p {
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.55);
+         }
+      </style>
+   </head>
+   <body>
+      <div class="yellowbox">
+         <p>Microsoft.</p>
+      </div>
+      <div class="redbox">
+         <p>Apple.</p>
+      </div>
+      <div class="greenbox">
+         <p>Linux.</p>
+      </div>
+   </body>
+</html>
