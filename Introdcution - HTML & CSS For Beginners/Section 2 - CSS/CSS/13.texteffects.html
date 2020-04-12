@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Text Align and Text Font</title>
+      <style>
+         .yellowbox {
+            background-color: yellow;
+            height: 200px;
+            width: auto;
+            font-size: 2.5em;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+         }
+         .yellowbox:hover {
+            overflow: visible;
+            white-space: normal;
+         }
+         .redbox {
+            background-color: rgb(157, 56, 56);
+            color: white;
+            height: 200px;
+            width: 500px;
+            font-size: 1.5em;
+            overflow: hidden;
+            word-break: break-all;
+            word-wrap: break-word;
+         }
+         .greenbox {
+            background-color: #008080;
+            color: white;
+            height: 200px;
+            width: auto;
+            font-size: 2.5em;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="yellowbox">
+         Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft Microsoft.
+      </div>
+      <br>
+      <div class="redbox">
+         Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple LoooooooongApple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple LooooooooooooooooooooooooooooooooooongApple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple Apple.
+      </div>
+      <br>
+      <div class="greenbox">
+         Linux.
+      </div>
+   </body>
+</html>
