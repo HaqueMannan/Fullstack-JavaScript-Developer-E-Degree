@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Styling Lists and Links</title>
+      <style>
+         a:link {
+            color: indianred;
+         }
+         a:hover {
+            font-size: 1.5em;
+         }
+         div.yellowbox a:active {
+            font-size: 4em;
+         }
+         div.greenbox a:visited {
+            color: lightseagreen;
+         }
+         ul.list1 {
+            list-style-type: square;
+            list-style-type: lower-roman;
+            list-style-type: upper-roman;
+            list-style-image: url(img/bluesquare.png);
+         }
+         ul.list2 {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+         }
+         ul.list2 li {
+            background-image: url(img/bluesquare.png);
+            background-repeat: no-repeat;
+            background-position: 0px center;
+            padding-left: 30px;
+         }
+         .yellowbox {
+            background-color: yellow;
+            height: 100px;
+            width: auto;
+         }
+         .redbox {
+            background-color: rgb(157, 56, 56);
+            color: white;
+            height: 100px;
+            width: auto;
+         }
+         .greenbox {
+            background-color: #008080;
+            color: white;
+            height: 100px;
+            width: auto;
+         }
+      </style>
+   </head>
+   <body>
+      <p>A List of European Capitals:</p>
+      <ul class="list1">
+         <li>London</li>
+         <li>Madrid</li>
+         <li>Paris</li>
+      </ul>
+      <p>A List of European Capitals:</p>
+      <ul class="list2">
+         <li>London</li>
+         <li>Madrid</li>
+         <li>Paris</li>
+      </ul>
+
+      <div class="yellowbox">
+         <p>Microsoft.</p>
+         <p><a href="https://www.microsoft.com/">Visit Link</a></p>
+      </div>
+      <div class="redbox">
+         <p>Apple.</p>
+         <a href="https://www.apple.com/">Visit Link</a>
+      </div>
+      <div class="greenbox">
+         <p>Linux.</p>
+         <a href="https://www.linux.org/">Visit Link</a>
+      </div>
+   </body>
+</html>
