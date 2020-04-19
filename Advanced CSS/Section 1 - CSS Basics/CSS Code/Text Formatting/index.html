@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="style.css">
+      <title>Text Formatting</title>
+      <style>
+         div {
+            text-align: right;
+            border: 2px solid red;
+         }
+
+         p {
+            display: inline;
+            background-color: #23af23;
+            color: #fff;
+            font-size: 25px;
+            text-align: right;   /* text-align does not work with inline elements */
+         }
+      </style>
+   </head>
+   <body> 
+      <div>
+         <p>This paragraph element is made inline.</p>
+      </div>
+   </body>
+</html>
