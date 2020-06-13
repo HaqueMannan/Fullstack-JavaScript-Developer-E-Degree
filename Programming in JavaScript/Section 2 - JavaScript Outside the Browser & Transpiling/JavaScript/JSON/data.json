@@ -1,0 +1,15 @@
+{
+   "title": "User Data",
+   "version": 1.0,
+   "active": false,
+   "people": [
+      {
+         "name": "John Doe",
+         "age": 25
+      },
+      {
+         "name": "Jane Doe",
+         "age": 23
+      }
+   ]
+}
