@@ -1,0 +1,19 @@
+{
+   "name": "webpack-example",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "build": "node build.js",
+      "build-config": "webpack",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "dependencies": {
+      "webpack": "4.29.6"
+   },
+   "author": "",
+   "license": "ISC",
+   "devDependencies": {
+      "webpack-cli": "^3.3.11"
+   }
+}
