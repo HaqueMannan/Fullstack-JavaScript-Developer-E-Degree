@@ -1,0 +1,14 @@
+{
+   "name": "my-package",
+   "version": "1.0.0",
+   "description": "My sample Node package",
+   "main": "index.js",
+   "scripts": {
+      "hello": "node hello.js"
+   },
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "cowsay": "^1.4.0"
+   }
+}
