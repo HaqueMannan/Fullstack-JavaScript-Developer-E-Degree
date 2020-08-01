@@ -4,12 +4,19 @@
    "description": "Writing a TDD Application Example",
    "main": "index.js",
    "scripts": {
-      "test": "./node_modules/mocha/bin/mocha"
+      "test": "./node_modules/mocha/bin/mocha",
+      "start": "npm run",
+      "myTest": "concurrently \"http-server -a localhost -p 3000\" \"open http://localhost:3000/test/index\"",
+      "open": "concurrently \"http-server -a localhost -p 3000\" \"open http://localhost:3000/build/index\""
    },
    "author": "",
    "license": "ISC",
    "dependencies": {
       "chai": "^4.2.0",
       "mocha": "^8.0.1"
+   },
+   "devDependencies": {
+      "concurrently": "^5.2.0",
+      "http-server": "^0.12.3"
    }
 }
