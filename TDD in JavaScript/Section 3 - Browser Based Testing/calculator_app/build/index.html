@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="calculator.css">
+      <script src="calculator.js"></script>
+      <title>Browser Based Testing (TDD)</title>
+   </head>
+   <body>
+      <div id="calculator">
+         Answer: <input id="answer" type="text" readonly>
+         <br>
+         <br>
+
+         <input id="num1" class="screen" type="number">
+         <input id="num2" type="number">
+         <button id="plus" onclick="perform_operation('+')">+</button>
+         <button id="plus" onclick="perform_operation('-')">-</button>
+         <button id="plus" onclick="perform_operation('*')">*</button>
+         <button id="plus" onclick="perform_operation('/')">/</button>
+      </div>
+
+      <script>
+         function perform_operation(operator) {
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var cal = new Calculator();
+            var value_sum = 0;
+
+            if(operator == "+") {
+               value_sum = cal.sum(parseInt(num1), parseInt(num2));
+            }
+            else if(operator == "-") {
+               value_sum = cal.subtract(parseInt(num1), parseInt(num2));
+            }
+            else if(operator == "*") {
+               value_sum = cal.multiply(parseInt(num1), parseInt(num2));
+            }
+            else if(operator == "/") {
+               value_sum = cal.divide(parseInt(num1), parseInt(num2));
+            }
+            console.log(value_sum);
+            document.getElementById("answer").value = value_sum;
+         }
+      </script>
+   </body>
+</html>
