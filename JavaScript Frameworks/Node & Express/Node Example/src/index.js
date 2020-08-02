@@ -1,7 +1,12 @@
 const express = require('express');
 const app = express();
-const hello = require('./hello.js');
+const hello = require('./hello');
 var PORT = process.env.PORT || 3000;
+
+app.use('/hello', function(req, res, next) {
+   console.log('A new request was received at ' + Date.now());
+   next();
+});
 
 app.get('/hello', function(req,res) {
    res.send(hello);
