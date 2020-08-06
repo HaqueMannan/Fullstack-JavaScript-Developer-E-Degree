@@ -30,12 +30,16 @@ app.get('/api/lessons/:id', function(req, res) {
 });
 
 app.post('/api/lessons', function(req, res) {
-   const lesson = {
-      id: lessons.length + 1,
-      lesson: req.body.lesson
+   if(!req.body.lesson || req.body.lesson.length < 3) {
+      res.status(400).send('The lesson is required and should be at least 3 characters long');
+   } else {
+      const lesson = {
+         id: lessons.length + 1,
+         lesson: req.body.lesson
+      };
+      lessons.push(lesson);
+      res.send(lesson);
    };
-   lessons.push(lesson);
-   res.send(lesson);
 });
 
 const PORT = process.env.PORT || 3000;
