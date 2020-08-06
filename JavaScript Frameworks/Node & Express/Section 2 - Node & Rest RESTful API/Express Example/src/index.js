@@ -61,6 +61,23 @@ app.put('/api/lessons/:id', function(req, res) {
    };
 });
 
+app.delete('/api/lessons/:id', function(req, res) {
+   // Look up existing lesson
+   const lesson = lessons.find(function(l) {
+      return l.id === parseInt(req.params.id);
+   });
+
+   // If lesson does not exist, return a 404 error - not found
+   if(!lesson) {
+      res.status(404).send('The lesson ID provided was not found');
+   } else {
+      // Delete the specified lesson and return deleted lesson to client in the browser
+      const index = lessons.indexOf(lesson);
+      lessons.splice(index, 1);
+      res.send(lesson);
+   };
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, function() {
    console.log(`Running on port: ${PORT}`);
