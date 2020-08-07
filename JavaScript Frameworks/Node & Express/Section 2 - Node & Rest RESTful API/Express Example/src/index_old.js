@@ -9,13 +9,18 @@ const lessons = [
    { id: 3, lesson: 'lesson 3' },
 ];
 
-// GET ROUTE
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/', function(req, res) {
+   res.send('Hello World!');
+});
 
-app.get('/api/lessons', (req, res) => res.send(lessons));
+app.get('/api/lessons', function(req, res) {
+   res.send(lessons);
+});
 
-app.get('/api/lessons/:id', (req, res) => {
-   const lesson = lessons.find((l) => l.id === parseInt(req.params.id));
+app.get('/api/lessons/:id', function(req, res) {
+   const lesson = lessons.find(function(l) {
+      return l.id === parseInt(req.params.id);
+   });
 
    if(!lesson) {
       res.status(404).send('The lesson ID provided was not found');
@@ -24,8 +29,7 @@ app.get('/api/lessons/:id', (req, res) => {
    };
 });
 
-// POST ROUTE
-app.post('/api/lessons', (req, res) => {
+app.post('/api/lessons', function(req, res) {
    if(!req.body.lesson || req.body.lesson.length < 3) {
       res.status(400).send('The lesson is required and should be at least 3 characters long');
    } else {
@@ -38,10 +42,11 @@ app.post('/api/lessons', (req, res) => {
    };
 });
 
-// PUT ROUTE
-app.put('/api/lessons/:id', (req, res) => {
+app.put('/api/lessons/:id', function(req, res) {
    // Look up existing lesson
-   const lesson = lessons.find(l => l.id === parseInt(req.params.id));
+   const lesson = lessons.find(function(l) {
+      return l.id === parseInt(req.params.id);
+   });
 
    // If lesson does not exist, return a 404 error - not found
    if(!lesson) {
@@ -56,10 +61,11 @@ app.put('/api/lessons/:id', (req, res) => {
    };
 });
 
-// DELETE ROUTE
-app.delete('/api/lessons/:id', (req, res) => {
+app.delete('/api/lessons/:id', function(req, res) {
    // Look up existing lesson
-   const lesson = lessons.find(l => l.id === parseInt(req.params.id));
+   const lesson = lessons.find(function(l) {
+      return l.id === parseInt(req.params.id);
+   });
 
    // If lesson does not exist, return a 404 error - not found
    if(!lesson) {
@@ -72,6 +78,7 @@ app.delete('/api/lessons/:id', (req, res) => {
    };
 });
 
-// RUN HTTP SERVER
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Running on port: ${PORT}`));
+app.listen(PORT, function() {
+   console.log(`Running on port: ${PORT}`);
+});
