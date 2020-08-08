@@ -32,13 +32,34 @@ router.post('/', async (req, res) => {
    };
 });
 
+router.patch('/:id', getMovie, async (req, res) => {
+   if(req.body.movieTitle != null) res.movie.movieTitle = req.body.movieTitle;
+   if(req.body.movieDirector != null) res.movie.movieDirector = req.body.movieDirector;
+
+   try {
+      const updatedMovie = await res.movie.save();
+      res.json(updatedMovie);
+   } catch(error) {
+      res.status(400).json({ message: 'Movie not updated.' });
+   };
+});
+
+router.delete('/:id', getMovie, async (req, res) => {
+   try {
+      await res.movie.remove();
+      res.json({ message: 'Deleted movie.' });
+   } catch(err) {
+      res.status(500).json({ message: 'Could not find movie.' });
+   };
+});
+
 // MIDDLEWARE
 async function getMovie(req, res, next) {
    let movie;
    try {
       movie = await Movie.findById(req.params.id);
       if(movie == null) {
-         return res.status(404).json({ message: 'Cannot find movie.' })
+         return res.status(404).json({ message: 'Cannot find movie.' });
       };
    } catch(err) {
       return res.status(500).json({ message: 'The id selected was not found.' });
