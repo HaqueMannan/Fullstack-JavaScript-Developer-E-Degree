@@ -7,11 +7,31 @@
    </head>
    <body>
       <p>Welcome to the Movies RESTful API</p>
-      <form>
+      <form id="user_form">
          <field>
             <label>RESTful API</label>
-            <input type="text">
+            <br><br>
+            <label>GET</label>
+            <input id="movieId" type="text" name="movieId" placeholder="movie id">
+            <button id="getButton" name="getButton" value="submit" type="submit">Get Movies</button> <br><br>
          </field>
       </form>
+
+      <form id="user_form_post">
+         <field>
+            <label>POST</label>
+            <label>Movie Title</label>
+            <input id="movieInput" type="text" name="movieTitle" placeholder="Post Movie" />
+            <label>Movie Director</label>
+            <input id="directorInput" type="text" name="movieDirector" placeholder="Post Director" />
+
+            <button id="postButton" name="postButton" method="POST">Post Movie</button>
+         </field>
+      </form>
+
+      <p>Movies Database:</p>
+      <div id="results"></div>
+
+      <script src="./api.js"></script>
    </body>
 </html>
