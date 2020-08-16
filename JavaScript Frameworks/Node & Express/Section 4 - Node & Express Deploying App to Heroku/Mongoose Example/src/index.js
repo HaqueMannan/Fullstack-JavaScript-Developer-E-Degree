@@ -19,6 +19,5 @@ mongoose.connect(DATABASE_URL, {
 app.use(express.json());
 app.use('/movies', moviesRouter);
 
-
 // RUN SERVER
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));

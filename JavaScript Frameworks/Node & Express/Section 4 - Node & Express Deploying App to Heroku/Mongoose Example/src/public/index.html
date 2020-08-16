@@ -13,7 +13,7 @@
          <field>
             <label id="request_type">GET:</label><br>
             <input id="movieId" type="text" name="movieId" placeholder="movie id">
-            <button id="getButton" name="getButton" value="submit" type="submit">Get Movies</button>
+            <button id="getButton" name="getButton" value="submit" type="submit">Get Movie(s)</button>
          </field>
       </form>
 
@@ -26,6 +26,30 @@
             <input id="directorInput" type="text" name="movieDirector" placeholder="Post Director" />
 
             <button id="postButton" name="postButton" method="POST">Post Movie</button>
+         </field>
+      </form>
+
+      <form id="user_form_put">
+         <field>
+            <label id="request_type">UPDATE:</label><br>
+            <label>Movie ID</label>
+            <input id="movieId" type="text" name="movieId" placeholder="Movie ID" />
+            <label>Movie Title</label>
+            <input id="movieInput" type="text" name="movieTitle" placeholder="Update Movie" />
+            <label>Movie Director</label>
+            <input id="directorInput" type="text" name="movieDirector" placeholder="Update Director" />
+
+            <button id="putButton" name="putButton" method="PUT">Update Movie</button>
+         </field>
+      </form>
+
+      <form id="user_form_delete">
+         <field>
+            <label id="request_type">DELETE:</label><br>
+            <label>Movie ID</label>
+            <input id="movieId" type="text" name="movieId" placeholder="Movie ID" />
+
+            <button id="deleteButton" name="deleteButton" method="DELETE">Delete Movie</button>
          </field>
       </form>
 

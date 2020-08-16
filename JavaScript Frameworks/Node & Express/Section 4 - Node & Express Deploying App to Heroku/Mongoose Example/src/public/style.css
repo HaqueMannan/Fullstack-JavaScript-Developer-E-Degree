@@ -6,7 +6,7 @@ h2 {
    text-align: center;
 }
 
-#reslts, #user_form, #user_form_post, #user_form_put, #user_form_delete {
+#results, #user_form, #user_form_post, #user_form_put, #user_form_delete {
    border-style: groove;
    border-radius: .5em;
    padding: 1em;
