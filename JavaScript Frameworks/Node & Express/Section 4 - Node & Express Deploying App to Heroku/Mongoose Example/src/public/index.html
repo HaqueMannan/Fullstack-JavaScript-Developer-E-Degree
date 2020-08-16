@@ -3,23 +3,23 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
       <title>Node & Express - Heroku Deployment</title>
    </head>
    <body>
       <p>Welcome to the Movies RESTful API</p>
+      <h2>RESTful API</h2>
       <form id="user_form">
          <field>
-            <label>RESTful API</label>
-            <br><br>
-            <label>GET</label>
+            <label id="request_type">GET:</label><br>
             <input id="movieId" type="text" name="movieId" placeholder="movie id">
-            <button id="getButton" name="getButton" value="submit" type="submit">Get Movies</button> <br><br>
+            <button id="getButton" name="getButton" value="submit" type="submit">Get Movies</button>
          </field>
       </form>
 
       <form id="user_form_post">
          <field>
-            <label>POST</label>
+            <label id="request_type">POST:</label><br>
             <label>Movie Title</label>
             <input id="movieInput" type="text" name="movieTitle" placeholder="Post Movie" />
             <label>Movie Director</label>
@@ -29,7 +29,7 @@
          </field>
       </form>
 
-      <p>Movies Database:</p>
+      <h2>Movies Database:</h2>
       <div id="results"></div>
 
       <script src="./api.js"></script>
